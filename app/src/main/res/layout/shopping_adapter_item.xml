@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20px"
+    >
+    <ImageView
+        android:id="@+id/shopping_adapter_iv"
+        android:layout_width="330px"
+        android:layout_height="300px"
+        android:background="@drawable/qq_qq"
+        />
+
+    <TextView
+        android:id="@+id/shopping_adapter_inpo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopping_adapter_iv"
+        android:text="妖精的口袋P草间弥生下2017新款甜美系"
+        android:maxEms="11"
+        android:textSize="24px"
+        android:textColor="#2a2a2a"
+        android:layout_marginLeft="20px"
+        />
+        <TextView
+            android:id="@+id/shopping_adapter_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥ 1,600"
+            android:layout_below="@id/shopping_adapter_inpo"
+            android:layout_marginTop="20px"
+            android:textSize="24px"
+            android:layout_marginLeft="20px"
+            android:textColor="#616ff3"
+            />
+    <Button
+        android:layout_width="96px"
+        android:layout_height="28px"
+        android:layout_alignRight="@id/shopping_adapter_iv"
+        android:layout_alignBottom="@id/shopping_adapter_price"
+        android:text="立即购买"
+        android:textSize="18px"
+        android:background="#616ff2"
+        android:textColor="#fff"
+        />
+</RelativeLayout>

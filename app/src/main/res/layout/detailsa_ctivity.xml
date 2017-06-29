@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/detailsa_iv"
+        android:layout_width="44px"
+        android:layout_height="44px"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="20px"
+        android:background="@drawable/finsh"
+        />
+    <ImageView
+        android:id="@+id/detailsa_fenxiang"
+        android:layout_width="54px"
+        android:layout_height="54px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30px"
+        android:background="@drawable/fenxiang"
+        android:layout_marginTop="30px"
+                />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="妖精的口袋"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30px"
+        android:textSize="32px"
+        android:textColor="#2a2a2a"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/detailsa_vp"
+        android:layout_width="720px"
+        android:layout_height="600px"
+        android:layout_below="@id/detailsa_fenxiang"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32px"
+        android:background="@drawable/qq_qq"
+        />
+
+</RelativeLayout>

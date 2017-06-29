@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <solid android:color="#fff"/>（控件的填充颜色）
+    <stroke android:width="3dp"
+            android:color="#4f83f7"/>（边框的宽度以及颜色）
+    <corners android:radius="15px"/>（边框的角的弧度）
+</shape>
