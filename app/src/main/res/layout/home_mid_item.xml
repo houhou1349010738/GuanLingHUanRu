@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="173px"
+              android:layout_height="240px"
+              android:orientation="vertical"
+              android:layout_marginRight="13px">
+
+<ImageView
+    android:layout_width="160px"
+    android:layout_height="146px"
+    android:id="@+id/home_mid_item_iv"
+    android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22px"
+        android:layout_gravity="center"
+        android:text="干红葡萄酒"
+        android:textSize="22px"
+        android:textColor="#2a2a2a"
+        android:id="@+id/home_mid_item_tvname"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_mid_item_tvmoney"
+        android:textSize="20px"
+        android:textColor="#de0b0b"
+        android:layout_marginTop="18px"
+        android:text="¥999"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

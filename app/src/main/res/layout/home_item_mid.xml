@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="426px">
+                android:layout_width="match_parent"
+                android:layout_height="426px">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30px"
@@ -32,7 +32,9 @@
         android:layout_height="238px"
         android:id="@+id/mid_recycle"
         android:layout_below="@+id/mid_lltop"
-        android:layout_marginBottom="26px"></android.support.v7.widget.RecyclerView>
+        android:layout_marginBottom="26px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="7px"></android.support.v7.widget.RecyclerView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30px"
