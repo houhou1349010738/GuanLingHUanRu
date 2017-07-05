@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">OnLyU</string>
+    <string name="edit">编辑</string>
+    <string name="shop_title">购物车</string>
+    <string name="count_total">总计：</string>
+    <string name="count_money">￥%s</string>
+    <string name="count_goods">去结算</string>
 </resources>
