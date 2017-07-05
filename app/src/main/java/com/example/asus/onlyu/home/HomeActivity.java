@@ -10,6 +10,7 @@ import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
 import com.example.asus.onlyu.module.home.Home_fragment;
 import com.example.asus.onlyu.module.merchant.MerChant;
+import com.example.asus.onlyu.module.shoppingcar.ShoppingCar_Fragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,6 +84,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
                 mIvHome.setImageResource(R.drawable.home_mr);
                 break;
             case R.id.iv_shop:
+                replaceFragment(R.id.intofra_fral,new ShoppingCar_Fragment(),"shop");
                 mIvShop.setImageResource(R.drawable.shop_dj);
                 mIvMy.setImageResource(R.drawable.my_mr);
                 mIvHome.setImageResource(R.drawable.home_mr);
