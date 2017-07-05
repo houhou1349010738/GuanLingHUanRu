@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="32px"
+            android:layout_marginTop="32px"
+            android:text="@string/shop_title"
+            android:textColor="#2a2a2a"
+            android:textSize="32px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/toolbar"
+        android:background="#CCC"/>
+
+    <RelativeLayout
+        android:id="@+id/rlBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="#ccc"/>
+
+        <ImageView
+            android:id="@+id/ivSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="12px"
+            android:background="@drawable/ic_uncheck"/>
+
+        <TextView
+            android:id="@+id/tvSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivSelectAll"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="8px"
+            android:text="全选"
+            android:textColor="#2a2a2a"
+            android:textSize="22px"/>
+
+        <TextView
+            android:id="@+id/tvCountTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:layout_toRightOf="@+id/tvSelectAll"
+            android:text="@string/count_total"
+            android:textColor="#2a2a2a"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/tvCountMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvCountTotal"
+            android:text="@string/count_money"
+            android:textColor="#bb0c0c"
+            android:textSize="26px"/>
+
+        <TextView
+            android:id="@+id/btnSettle"
+            android:layout_width="270px"
+            android:layout_height="72px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="#3366ff"
+            android:gravity="center"
+            android:text="@string/count_goods"
+            android:textColor="#ffffff"
+            android:textSize="26px"/>
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rlBottomBar"
+        android:layout_below="@+id/line"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000"
+        android:longClickable="true"/>
+</RelativeLayout>
