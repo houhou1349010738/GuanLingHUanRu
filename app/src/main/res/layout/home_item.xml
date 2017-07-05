@@ -4,12 +4,12 @@
               android:layout_height="wrap_content"
     android:layout_marginLeft="20px"
     android:layout_marginRight="30px"
-    android:layout_marginBottom="20px">
+    android:paddingBottom="50px">
     <ImageView
         android:layout_width="100px"
         android:layout_height="100px"
         android:id="@+id/home_item_iv"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/tim222g"/>
 
     <TextView
         android:id="@+id/home_item_tvname"

@@ -17,6 +17,7 @@
             android:layout_marginRight="16px"
             android:layout_gravity="center"/>
         <TextView
+            android:id="@+id/mid_tv_jxhh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="26px"
@@ -46,6 +47,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="16px"/>
         <TextView
+            android:id="@+id/mid_tv_ttzx"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="26px"
