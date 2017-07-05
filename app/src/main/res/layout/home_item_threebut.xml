@@ -36,7 +36,7 @@
             <ImageView
                 style="@style/threebtn_iv_homefra"
                 android:id="@+id/threebut_iv_nfc"
-                android:src="@drawable/nfc"
+                android:src="@drawable/home_nfc"
                 />
             <TextView
                 android:text="NFC查询"
