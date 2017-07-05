@@ -1,19 +1,19 @@
 package com.example.asus.onlyu.home;
 
 
-import android.support.v4.content.ContextCompat;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
 import com.example.asus.onlyu.module.home.Home_fragment;
 import com.example.asus.onlyu.module.merchant.MerChant;
-import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationItem;
-import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView;
-import com.luseen.luseenbottomnavigation.BottomNavigation.OnBottomNavigationItemClickListener;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 /**
@@ -22,10 +22,15 @@ import butterknife.BindView;
  */
 
 public class HomeActivity<T> extends MVPBaseActivity<T> {
-    @BindView(R.id.activity_main)
-    RelativeLayout mActivityMain;
-    @BindView(R.id.bottomNavigation)
-    BottomNavigationView mBottomNavigation;
+
+    @BindView(R.id.iv_home)
+    ImageView mIvHome;
+    @BindView(R.id.iv_pinpai)
+    ImageView mIvPinpai;
+    @BindView(R.id.iv_shop)
+    ImageView mIvShop;
+    @BindView(R.id.iv_my)
+    ImageView mIvMy;
     @BindView(R.id.intofra_fral)
     FrameLayout mIntofraFral;
 
@@ -33,33 +38,6 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     protected void initview() {
         //初始化视图
         addFragment(R.id.intofra_fral,new Home_fragment(),"home");
-        final BottomNavigationItem home = new BottomNavigationItem
-                ("首页", ContextCompat.getColor(this, R.color.bottom), R.mipmap.home_nomal);
-        BottomNavigationItem biz= new BottomNavigationItem
-                ("商家", ContextCompat.getColor(this, R.color.bottom), R.mipmap.sj_nomal);
-        BottomNavigationItem shop = new BottomNavigationItem
-                ("购物车", ContextCompat.getColor(this, R.color.bottom), R.mipmap.gwc_nomal);
-        BottomNavigationItem me = new BottomNavigationItem
-                ("我的", ContextCompat.getColor(this, R.color.bottom), R.mipmap.me_nomal);
-        mBottomNavigation.addTab(home);
-        mBottomNavigation.addTab(biz);
-        mBottomNavigation.addTab(shop);
-        mBottomNavigation.addTab(me);
-        mBottomNavigation.isColoredBackground(false);
-        mBottomNavigation.setItemActiveColorWithoutColoredBackground(ContextCompat.getColor(this, R.color.bottom));
-        mBottomNavigation.setOnBottomNavigationItemClickListener(new OnBottomNavigationItemClickListener() {
-            @Override
-            public void onNavigationItemClick(int index) {
-                switch (index){
-                    case 0:
-                        replaceFragment(R.id.intofra_fral,new Home_fragment(),"home");
-                        break;
-                    case 1:
-                        replaceFragment(R.id.intofra_fral,new MerChant<>(),"merchant");
-                        break;
-                }
-            }
-        });
 
     }
 
@@ -80,4 +58,42 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     }
 
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
+
+    @OnClick({R.id.iv_home, R.id.iv_pinpai, R.id.iv_shop, R.id.iv_my})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.iv_home:
+                replaceFragment(R.id.intofra_fral,new Home_fragment(),"home");
+                mIvHome.setImageResource(R.drawable.home_dj);
+                mIvPinpai.setImageResource(R.drawable.pinpai_mr);
+                mIvShop.setImageResource(R.drawable.shop_mr);
+                mIvMy.setImageResource(R.drawable.my_mr);
+                break;
+            case R.id.iv_pinpai:
+                replaceFragment(R.id.intofra_fral,new MerChant(),"pinpai");
+                mIvPinpai.setImageResource(R.drawable.pinpai_dj);
+                mIvShop.setImageResource(R.drawable.shop_mr);
+                mIvMy.setImageResource(R.drawable.my_mr);
+                mIvHome.setImageResource(R.drawable.home_mr);
+                break;
+            case R.id.iv_shop:
+                mIvShop.setImageResource(R.drawable.shop_dj);
+                mIvMy.setImageResource(R.drawable.my_mr);
+                mIvHome.setImageResource(R.drawable.home_mr);
+                mIvPinpai.setImageResource(R.drawable.pinpai_mr);
+                break;
+            case R.id.iv_my:
+                mIvMy.setImageResource(R.drawable.my_dj);
+                mIvHome.setImageResource(R.drawable.home_mr);
+                mIvPinpai.setImageResource(R.drawable.pinpai_mr);
+                mIvShop.setImageResource(R.drawable.shop_mr);
+                break;
+        }
+    }
 }
