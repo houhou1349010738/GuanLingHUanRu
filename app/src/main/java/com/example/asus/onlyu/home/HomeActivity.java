@@ -38,7 +38,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     @Override
     protected void initview() {
         //初始化视图
-        addFragment(R.id.intofra_fral,new Home_fragment(),"home");
+        replaceFra(R.id.intofra_fral,new Home_fragment());
 
     }
 
@@ -70,21 +70,21 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.iv_home:
-                replaceFragment(R.id.intofra_fral,new Home_fragment(),"home");
+                replaceFra(R.id.intofra_fral,new Home_fragment());
                 mIvHome.setImageResource(R.drawable.home_dj);
                 mIvPinpai.setImageResource(R.drawable.pinpai_mr);
                 mIvShop.setImageResource(R.drawable.shop_mr);
                 mIvMy.setImageResource(R.drawable.my_mr);
                 break;
             case R.id.iv_pinpai:
-                replaceFragment(R.id.intofra_fral,new MerChant(),"pinpai");
+                replaceFra(R.id.intofra_fral,new MerChant());
                 mIvPinpai.setImageResource(R.drawable.pinpai_dj);
                 mIvShop.setImageResource(R.drawable.shop_mr);
                 mIvMy.setImageResource(R.drawable.my_mr);
                 mIvHome.setImageResource(R.drawable.home_mr);
                 break;
             case R.id.iv_shop:
-                replaceFragment(R.id.intofra_fral,new ShoppingCar_Fragment(),"shop");
+                replaceFra(R.id.intofra_fral,new ShoppingCar_Fragment());
                 mIvShop.setImageResource(R.drawable.shop_dj);
                 mIvMy.setImageResource(R.drawable.my_mr);
                 mIvHome.setImageResource(R.drawable.home_mr);

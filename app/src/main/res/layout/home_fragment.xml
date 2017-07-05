@@ -5,6 +5,7 @@
 <com.jcodecraeer.xrecyclerview.XRecyclerView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/xrecycle_homef"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+    android:id="@+id/xrecycle_homef"
+    android:layout_marginBottom="64px"></com.jcodecraeer.xrecyclerview.XRecyclerView>
 
 </RelativeLayout>
