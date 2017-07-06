@@ -1,14 +1,19 @@
 package com.example.asus.onlyu.module.shoppingcar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseFragment;
+import com.example.asus.onlyu.module.shoppingcar.order.AllOrderActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -26,6 +31,16 @@ public class ShoppingCar_Fragment extends MVPBaseFragment {
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     Unbinder unbinder;
+    @BindView(R.id.ivSelectAll)
+    ImageView mIvSelectAll;
+    @BindView(R.id.tvCountTotal)
+    TextView mTvCountTotal;
+    @BindView(R.id.tvCountMoney)
+    TextView mTvCountMoney;
+    @BindView(R.id.btnSettle)
+    Button mBtnSettle;
+    @BindView(R.id.expandableListView)
+    ExpandableListView mExpandableListView;
 
     @Override
     protected void initdata() {
@@ -34,6 +49,13 @@ public class ShoppingCar_Fragment extends MVPBaseFragment {
 
     @Override
     protected void initView() {
+        mBtnSettle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AllOrderActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
