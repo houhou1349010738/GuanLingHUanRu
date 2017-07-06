@@ -1,9 +1,7 @@
 package com.example.asus.onlyu.home;
 
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -11,6 +9,7 @@ import android.widget.ImageView;
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
 import com.example.asus.onlyu.module.home.Home_fragment;
+import com.example.asus.onlyu.module.home.utils.AlertDialog;
 import com.example.asus.onlyu.module.merchant.MerChant;
 import com.example.asus.onlyu.module.shoppingcar.ShoppingCar_Fragment;
 
@@ -41,7 +40,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     protected void initview() {
         //初始化视图，加载首页fragment
         replaceFra(R.id.intofra_fral,new Home_fragment());
-//        dialog();
+        dialog();
 
     }
 
@@ -107,20 +106,18 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     }
 
     private void dialog() {
-      AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
-      builder.setMessage("是否使用当前位置");
-      builder.setPositiveButton("取消", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-        builder.setNegativeButton("确认", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
-            }
-        });
-     builder.create().show();
-     }
+      new AlertDialog(HomeActivity.this).builder().setMsg("是否使用当前位置")
+              .setPositiveButton("确定", new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+
+                  }
+              })
+              .setNegativeButton("取消", new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+
+                  }
+              }).show();
+}
 }
