@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:background="#f7f7f7"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="238px"
+    <RelativeLayout
         android:layout_marginTop="30px"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="289px"
-        android:background="@color/colorAccent"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_marginLeft="20px"
+            android:background="@drawable/finsh"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新人注册"
+            android:textSize="32px"
+            android:textColor="#2a2a2a"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_marginTop="12px"
@@ -32,17 +42,17 @@
             android:background="#a0a0a0"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="184px"/>
-        
+
         <ImageView
             android:id="@+id/img_phonenumber"
             android:layout_width="44px"
             android:layout_height="44px"
             android:layout_alignLeft="@id/flag_tv1"
             android:layout_alignBottom="@id/flag_tv1"
-            android:layout_marginBottom="14px"
             android:background="@drawable/phone"/>
 
         <EditText
+            android:background="@null"
             android:id="@+id/input_phone"
             android:layout_toRightOf="@id/img_phonenumber"
             android:paddingLeft="10px"
@@ -50,7 +60,7 @@
             android:textSize="24px"
             android:textColor="#cccccc"
             android:layout_width="match_parent"
-            android:layout_height="68px"
+            android:layout_height="50px"
             android:hint="请输入您的手机号"/>
 
         <ImageView
@@ -59,10 +69,10 @@
             android:layout_height="44px"
             android:layout_alignLeft="@id/flag_tv2"
             android:layout_alignBottom="@id/flag_tv2"
-            android:layout_marginBottom="14px"
             android:background="@drawable/password"/>
 
         <EditText
+            android:background="@null"
             android:id="@+id/input_password"
             android:layout_toRightOf="@id/img_password"
             android:paddingLeft="10px"
@@ -70,60 +80,107 @@
             android:textSize="24px"
             android:textColor="#cccccc"
             android:layout_width="match_parent"
-            android:layout_height="68px"
+            android:layout_height="50px"
             android:hint="请输入您的密码"/>
 
-        <TextView
-            android:id="@+id/find_password"
-            android:layout_marginTop="18px"
-            android:layout_marginRight="10px"
-            android:textSize="18px"
-            android:textColor="#2a2a2a"
-            android:layout_alignRight="@id/flag_tv2"
-            android:layout_width="wrap_content"
-            android:layout_below="@id/flag_tv2"
-            android:text="找回密码"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
+        <Button
             android:id="@+id/img_show"
-            android:layout_width="44px"
-            android:layout_height="44px"
-            android:background="@drawable/colse"
-            android:layout_alignTop="@+id/img_password"
-            android:layout_alignEnd="@+id/flag_tv2"/>
-        <ImageView
-            android:visibility="gone"
-            android:id="@+id/img_hidden"
-            android:layout_width="44px"
-            android:layout_height="44px"
-            android:background="@drawable/open"
-            android:layout_alignTop="@+id/img_password"
-            android:layout_alignEnd="@+id/flag_tv2"/>
+            android:layout_width="138px"
+            android:layout_height="40px"
+            android:text="获取验证码"
+            android:textColor="#e93a38"
+            android:background="@drawable/red_button"
+            android:textSize="20px"
+            android:layout_marginRight="20px"
+            android:layout_alignBottom="@id/flag_tv1"
+            android:layout_marginBottom="10px"
+            android:layout_alignEnd="@id/flag_tv1"/>
     </RelativeLayout>
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_marginTop="20px"
-        android:layout_width="680px"
-        android:layout_height="70px"
-        android:layout_gravity="center"
-        android:background="@drawable/login_button"
-        android:text="立即登录"
-        android:textSize="28px"
-        android:textColor="#ffffff"/>
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_marginTop="18px"
-        android:layout_width="680px"
-        android:layout_height="70px"
-        android:layout_gravity="center"
-        android:background="@drawable/register_button"
-        android:text="新人注册"
-        android:textSize="28px"
-        android:textColor="#000000"/>
 
     <RelativeLayout
+        android:layout_marginTop="12px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/flag_tv3"
+            android:layout_width="680px"
+            android:layout_height="1px"
+            android:background="#a0a0a0"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="92px"/>
+
+        <TextView
+            android:id="@+id/flag_tv4"
+            android:layout_width="680px"
+            android:layout_height="1px"
+            android:background="#a0a0a0"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="184px"/>
+
+        <ImageView
+            android:id="@+id/img_phonenumber3"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_alignLeft="@id/flag_tv3"
+            android:layout_alignBottom="@id/flag_tv3"
+            android:background="@drawable/phone"/>
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/input_phone3"
+            android:layout_toRightOf="@id/img_phonenumber3"
+            android:paddingLeft="10px"
+            android:layout_alignBottom="@id/flag_tv3"
+            android:textSize="24px"
+            android:textColor="#cccccc"
+            android:layout_width="match_parent"
+            android:layout_height="50px"
+            android:hint="请输入您的手机号"/>
+
+        <ImageView
+            android:id="@+id/img_password4"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_alignLeft="@id/flag_tv4"
+            android:layout_alignBottom="@id/flag_tv4"
+            android:background="@drawable/password"/>
+
+        <EditText
+            android:background="@null"
+            android:layout_height="50px"
+            android:id="@+id/input_password4"
+            android:layout_toRightOf="@id/img_password4"
+            android:paddingLeft="10px"
+            android:layout_alignBottom="@id/flag_tv4"
+            android:textSize="24px"
+            android:textColor="#cccccc"
+            android:layout_width="match_parent"
+            android:hint="请输入您的密码"/>
+
+    </RelativeLayout>
+
+    <Button
         android:layout_marginTop="70px"
+        android:layout_width="680px"
+        android:layout_height="70px"
+        android:layout_gravity="center_horizontal"
+        android:text="立即注册"
+        android:textSize="28px"
+        android:textColor="#ffffff"
+        android:background="@drawable/login_button"/>
+
+    <CheckBox
+        android:layout_marginLeft="20px"
+        android:text="同意用户协议"
+        android:textColor="#cccccc"
+        android:layout_marginTop="20px"
+        android:textSize="24px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="200px"
         android:layout_width="680px"
         android:layout_gravity="center"
         android:layout_height="wrap_content">
@@ -193,6 +250,5 @@
                 android:textColor="#666666"/>
         </RelativeLayout>
     </RelativeLayout>
-
-
+    
 </LinearLayout>

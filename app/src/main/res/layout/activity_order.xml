@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.onlyu.module.shoppingcar.OrderActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/affirm_order"
+                android:textColor="#2a2a2a"
+                android:textSize="32px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:layout_below="@+id/toolbar"
+        android:gravity="right"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="680px"
+            android:layout_height="200px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="20px"
+            android:background="@drawable/dibu"
+            >
+
+            <TextView
+                android:id="@+id/order_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="50px"
+                android:text="收货人信息"
+                android:textColor="#2a2a2a"
+                android:textSize="26px"
+                />
+
+            <TextView
+                android:id="@+id/order_tvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_tv"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="22px"
+                android:text="张三"
+                android:textColor="#2a2a2a"
+                android:textSize="24px"
+                />
+
+            <TextView
+                android:id="@+id/order_tvtell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_tv"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="22px"
+                android:layout_toRightOf="@+id/order_tvname"
+                android:text="17600000000"
+                android:textColor="#2a2a2a"
+                android:textSize="24px"
+                />
+
+            <TextView
+                android:id="@+id/order_tvaddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_tvname"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="10px"
+                android:text="北京市海淀区软件园"
+                android:textColor="#2a2a2a"
+                android:textSize="24px"
+                />
+
+            <ImageView
+                android:layout_width="44px"
+                android:layout_height="44px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:background="#ff33ff"
+                android:src="@drawable/you"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/receiveline"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="680px"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="28px"
+            android:background="@drawable/dibu">
+
+            <TextView
+                android:id="@+id/order_tvcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="50px"
+                android:text="一件商品"
+                android:textColor="#2a2a2a"
+                android:textSize="26px"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/order_tvcount"
+                android:background="#eeeeee"
+                />
+
+            <ImageView
+                android:id="@+id/order_shop_iv"
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:layout_below="@+id/order_tvcount"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="24px"
+                android:src="@drawable/ic_launcher"
+                />
+
+            <TextView
+                android:id="@+id/order_shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_tvcount"
+                android:layout_toRightOf="@+id/order_shop_iv"
+                android:layout_marginTop="16px"
+                android:layout_marginLeft="14px"
+                android:text="阿迪达斯裤子"
+                />
+
+            <LinearLayout
+                android:id="@+id/order_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_shop_name"
+                android:layout_toRightOf="@+id/order_shop_iv"
+                android:layout_marginTop="16px"
+                android:layout_marginLeft="14px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="数量"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:id="@+id/order_shop_count"
+                    android:text="X1"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="尺码"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:id="@+id/order_shop_size"
+                    android:text="：28"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:text="颜色"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:id="@+id/order_shop_color"
+                    android:text=":深蓝色"
+                    android:textSize="22px"
+                    android:textColor="#999999"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_ll"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="22px"
+                android:text="1,636"
+                android:textSize="22px"
+                />
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/order_ll"
+                android:background="#eeeeee"
+                android:layout_marginTop="70px"
+                />
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="114px"
+                android:layout_below="@+id/tv_line"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2a2a2a"
+                    android:layout_marginLeft="20px"
+                    android:layout_centerVertical="true"
+                    android:textSize="24px"
+                    android:text="商品金额："
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20px"
+                    android:textSize="22px"
+                    android:layout_centerVertical="true"
+                    android:textColor="#2a2a2a"
+                    android:text="16,36.00"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="100px"
+       android:layout_alignParentBottom="true"
+       >
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:text="应付金额：￥"
+           android:layout_marginLeft="40px"
+           android:textSize="28px"
+           android:textColor="#2a2a2a"
+           />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="210px"
+           android:layout_centerVertical="true"
+           android:text="16,36.00"
+           android:textSize="28px"
+           android:textColor="#2a2a2a"
+           />
+
+       <Button
+           android:layout_width="244px"
+           android:layout_height="70px"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginRight="20px"
+           android:text="提交订单"
+           android:textSize="28px"
+           android:textColor="#ffffff"
+           android:background="#ff0000"
+           />
+   </RelativeLayout>
+</RelativeLayout>
