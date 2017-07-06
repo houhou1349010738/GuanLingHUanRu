@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/allorder_scrollview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.asus.onlyu.module.shoppingcar.order.AllOrderActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/allorder_relayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <com.zhy.autolayout.AutoRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/all_order"
+                    android:textColor="#2a2a2a"
+                    android:textSize="32px"/>
+            </com.zhy.autolayout.AutoRelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/allorder_tab"
+            android:layout_width="match_parent"
+            app:tabTextAppearance="@style/TextAppearance.Design.Tab.Custom"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_height="72px"
+            android:layout_marginTop="146px"></android.support.design.widget.TabLayout>
+
+        <FrameLayout
+            android:id="@+id/allorder_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="218px"></FrameLayout>
+
+    </RelativeLayout>
+</ScrollView>
