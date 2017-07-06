@@ -39,11 +39,11 @@ public class AlertDialog {
 	}
 
 	public AlertDialog builder() {
-		// »ñÈ¡Dialog²¼¾Ö
+		// è·å–Dialogå¸ƒå±€
 		View view = LayoutInflater.from(context).inflate(
 				R.layout.view_alertdialog, null);
 
-		// »ñÈ¡×Ô¶¨ÒåDialog²¼¾ÖÖĞµÄ¿Ø¼ş
+		// è·å–è‡ªå®šä¹‰Dialogå¸ƒå±€ä¸­çš„æ§ä»¶
 		lLayout_bg =  (RelativeLayout)view.findViewById(R.id.lLayout_bg);
 		txt_title = (TextView) view.findViewById(R.id.txt_title);
 		txt_title.setVisibility(View.GONE);
@@ -56,11 +56,11 @@ public class AlertDialog {
 		img_line = (ImageView) view.findViewById(R.id.img_line);
 		img_line.setVisibility(View.GONE);
 
-		// ¶¨ÒåDialog²¼¾ÖºÍ²ÎÊı
+		// å®šä¹‰Dialogå¸ƒå±€å’Œå‚æ•°
 		dialog = new Dialog(context, R.style.AlertDialogStyle);
 		dialog.setContentView(view);
 
-		// µ÷Õûdialog±³¾°´óĞ¡
+		// è°ƒæ•´dialogèƒŒæ™¯å¤§å°
 		lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams(802, 420));
 
 		return this;
@@ -69,7 +69,7 @@ public class AlertDialog {
 	public AlertDialog setTitle(String title) {
 		showTitle = true;
 		if ("".equals(title)) {
-			txt_title.setText("±êÌâ");
+			txt_title.setText("æ ‡é¢˜");
 		} else {
 			txt_title.setText(title);
 		}
@@ -79,7 +79,7 @@ public class AlertDialog {
 	public AlertDialog setMsg(String msg) {
 		showMsg = true;
 		if ("".equals(msg)) {
-			txt_msg.setText("ÄÚÈİ");
+			txt_msg.setText("å†…å®¹");
 		} else {
 			txt_msg.setText(msg);
 		}
@@ -95,7 +95,7 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showPosBtn = true;
 		if ("".equals(text)) {
-			btn_pos.setText("È·¶¨");
+			btn_pos.setText("ç¡®å®š");
 		} else {
 			btn_pos.setText(text);
 		}
@@ -113,7 +113,7 @@ public class AlertDialog {
 			final OnClickListener listener) {
 		showNegBtn = true;
 		if ("".equals(text)) {
-			btn_neg.setText("È¡Ïû");
+			btn_neg.setText("å–æ¶ˆ");
 		} else {
 			btn_neg.setText(text);
 		}
@@ -129,7 +129,7 @@ public class AlertDialog {
 
 	private void setLayout() {
 		if (!showTitle && !showMsg) {
-			txt_title.setText("ÌáÊ¾");
+			txt_title.setText("æç¤º");
 			txt_title.setVisibility(View.VISIBLE);
 		}
 
@@ -142,7 +142,7 @@ public class AlertDialog {
 		}
 
 		if (!showPosBtn && !showNegBtn) {
-			btn_pos.setText("È·¶¨");
+			btn_pos.setText("ç¡®å®š");
 			btn_pos.setVisibility(View.VISIBLE);
 			btn_pos.setBackgroundResource(R.drawable.alertdialog_single_selector);
 			btn_pos.setOnClickListener(new OnClickListener() {
