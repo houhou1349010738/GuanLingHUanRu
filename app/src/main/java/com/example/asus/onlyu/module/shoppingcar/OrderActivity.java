@@ -15,7 +15,6 @@ public class OrderActivity extends MVPBaseActivity {
 
     @Override
     protected void initview() {
-
     }
 
     @Override

@@ -15,7 +15,6 @@ public class AddressActivity extends MVPBaseActivity {
 
     @Override
     protected void initview() {
-
     }
 
     @Override

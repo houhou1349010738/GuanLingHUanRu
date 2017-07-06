@@ -28,7 +28,6 @@ public class AllOrder_Fragment_all extends MVPBaseFragment {
 
     @Override
     protected void initdata() {
-
     }
 
     @Override
@@ -45,7 +44,6 @@ public class AllOrder_Fragment_all extends MVPBaseFragment {
 
     @Override
     public void UpData(Object o) {
-
     }
 
     @Override

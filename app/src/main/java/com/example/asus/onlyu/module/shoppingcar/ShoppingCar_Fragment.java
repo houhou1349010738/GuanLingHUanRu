@@ -44,7 +44,6 @@ public class ShoppingCar_Fragment extends MVPBaseFragment {
 
     @Override
     protected void initdata() {
-
     }
 
     @Override

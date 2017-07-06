@@ -145,7 +145,6 @@
             android:textColor="#2a2a2a"
             android:background="@drawable/allorder_button"
             />
-
         <Button
             android:id="@+id/allorder_btn2"
             android:layout_width="128px"

@@ -43,7 +43,5 @@ public class AllOrderActivity extends MVPBaseActivity {
 
     @Override
     public void UpData(Object o) {
-
     }
-
 }
