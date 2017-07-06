@@ -1,36 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="166px"
+              android:layout_height="wrap_content"
     android:layout_marginLeft="20px"
-    android:layout_marginRight="20px"
-    android:layout_marginBottom="20px">
+    android:layout_marginRight="30px"
+    android:paddingBottom="50px">
     <ImageView
-        android:layout_width="150px"
-        android:layout_height="146px"
+        android:layout_width="100px"
+        android:layout_height="100px"
         android:id="@+id/home_item_iv"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/tim222g"/>
 
     <TextView
         android:id="@+id/home_item_tvname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28px"
-        android:layout_marginTop="28px"
         android:layout_toEndOf="@+id/home_item_iv"
-        android:textSize="24px"
-        android:textColor="#2a2a2a"
-        android:text="夏天吃龙虾要注意那些问题"/>
+        android:textSize="22px"
+        android:textColor="#494949"
+        android:text="夏天如何清洗包包，好好护理那些问题夏天吃那些问题些问题夏天吃那些问题"/>
 
     <TextView
         android:id="@+id/home_item_tvtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20px"
-        android:layout_alignParentBottom="true"
+       android:layout_below="@id/home_item_tvname"
+        android:layout_marginTop="30px"
         android:layout_alignStart="@+id/home_item_tvname"
         android:text="2017-05-15"
-        android:textSize="20px"
+        android:textSize="18px"
         android:textColor="#2a2a2a"/>
 
 

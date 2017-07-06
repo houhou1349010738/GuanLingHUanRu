@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="186px">
+              android:layout_height="wrap_content"
+    >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="30px"
-        android:layout_marginLeft="75px"
-        android:layout_marginRight="75px"
-        android:layout_marginBottom="24px"
+        android:layout_marginTop="54px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginBottom="70px"
         >
         <LinearLayout
             android:layout_width="0dp"
@@ -17,63 +18,68 @@
             android:orientation="vertical"
             android:layout_weight="1">
             <ImageView
-                android:layout_width="90px"
-                android:layout_height="90px"
+                style="@style/threebtn_iv_homefra"
+                android:id="@+id/threebut_iv_shopping"
+                android:src="@drawable/shangcheng"
+                />
+            <TextView
+                android:text="商城"
+                android:id="@+id/threebut_tv_shopping"
+                style="@style/threebtn_tv_homefra"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <ImageView
+                style="@style/threebtn_iv_homefra"
                 android:id="@+id/threebut_iv_nfc"
-                android:src="@mipmap/ic_launcher"
-                android:layout_gravity="center"/>
+                android:src="@drawable/home_nfc"
+                />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="NFC查询"
-                android:layout_marginTop="14px"
                 android:id="@+id/threebut_tv_nfc"
-                android:layout_gravity="center"
-                android:textColor="#2a2a2a"
-                android:textSize="26px"/>
+                style="@style/threebtn_tv_homefra"
+                />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1">
             <ImageView
-                android:layout_width="90px"
-                android:layout_height="90px"
-                android:id="@+id/threebut_iv_ewm"
-                android:src="@mipmap/ic_launcher"
-                android:layout_gravity="center"/>
+                style="@style/threebtn_iv_homefra"
+                android:id="@+id/threebut_iv_twocode"
+                android:src="@drawable/erweima"
+                />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="二维码查询"
-                android:layout_marginTop="14px"
-                android:id="@+id/threebut_tv_ewm"
-                android:layout_gravity="center"
-                android:textColor="#2a2a2a"
-                android:textSize="26px"/>
+                android:id="@+id/threebut_tv_twocode"
+                style="@style/threebtn_tv_homefra"
+                />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="1">
             <ImageView
-                android:layout_width="90px"
-                android:layout_height="90px"
+                style="@style/threebtn_iv_homefra"
                 android:id="@+id/threebut_iv_history"
-                android:src="@mipmap/ic_launcher"
-                android:layout_gravity="center"/>
+                android:src="@drawable/lishi"
+                />
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="查询历史"
-                android:layout_marginTop="14px"
                 android:id="@+id/threebut_tv_history"
-                android:layout_gravity="center"
-                android:textColor="#2a2a2a"
-                android:textSize="26px"/>
+                style="@style/threebtn_tv_homefra"
+                />
         </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,6 +1,9 @@
 package com.example.asus.onlyu.module.home;
 
+import android.support.v7.widget.LinearLayoutManager;
+
 import com.example.asus.onlyu.R;
+import com.example.asus.onlyu.adapter.HomeRecyclerAdapter;
 import com.example.asus.onlyu.base.MVPBaseFragment;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
@@ -28,7 +31,10 @@ public class Home_fragment extends MVPBaseFragment {
 
     @Override
     protected void initView() {
-
+        HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(getActivity());
+        mXrecycleHomef.setAdapter(adapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        mXrecycleHomef.setLayoutManager(linearLayoutManager);
     }
 
     @Override

@@ -80,7 +80,17 @@ public abstract class MVPBaseActivity<T> extends AutoLayoutActivity implements B
         getSupportFragmentManager().popBackStack(tag, 0);
         }
         }
-        /**
+    /**
+     * 首页替换fragment方法
+     */
+    protected void replaceFra(int contentView,Fragment fragment){
+        getSupportFragmentManager().beginTransaction()
+                .replace(contentView,fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
+    }
+
+    /**
         * 添加fragment
         * @param contentView
         * @param fragment
