@@ -159,8 +159,8 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         Item(View view) {
             super(view);
             ButterKnife.bind(this, view);
-            FontHelper.applyFont(mContext, mHomeItemTvname, "PingFang Medium.ttf");
-            FontHelper.applyFont(mContext, mHomeItemTvtime, "PingFang Medium.ttf");
+            FontHelper.applyFont(mContext, mHomeItemTvname, "fonts/PingFang Medium.ttf");
+            FontHelper.applyFont(mContext, mHomeItemTvtime, "fonts/PingFang Medium.ttf");
         }
     }
 }
