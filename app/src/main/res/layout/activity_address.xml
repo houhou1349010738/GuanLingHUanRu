@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.onlyu.module.shoppingcar.AddressActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <com.zhy.autolayout.AutoRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"/>
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/select_address"
+                android:textColor="#2a2a2a"
+                android:textSize="32px"/>
+        </com.zhy.autolayout.AutoRelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:background="#f7f7f7"
+        android:gravity="right"
+        >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shop_address_recycler"
+        android:layout_width="679px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:layout_marginRight="20px"
+        ></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true">
+    <Button
+        android:layout_width="680px"
+        android:layout_height="70px"
+        android:layout_centerInParent="true"
+        android:background="@drawable/address_btn"
+        android:text="添加新地址"
+        android:textSize="28px"
+        android:textColor="#ffffff"
+        />
+    </RelativeLayout>
+</RelativeLayout>

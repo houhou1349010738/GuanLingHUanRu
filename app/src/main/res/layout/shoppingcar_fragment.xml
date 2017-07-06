@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20px"
             android:layout_marginTop="12px"
-            android:background="@drawable/ic_uncheck"/>
+            android:src="@drawable/ic_uncheck"/>
 
         <TextView
             android:id="@+id/tvSelectAll"
@@ -85,14 +85,14 @@
             android:textColor="#bb0c0c"
             android:textSize="26px"/>
 
-        <TextView
+        <Button
             android:id="@+id/btnSettle"
             android:layout_width="270px"
             android:layout_height="72px"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20px"
-            android:background="#3366ff"
+            android:background="#cc0099"
             android:gravity="center"
             android:text="@string/count_goods"
             android:textColor="#ffffff"
