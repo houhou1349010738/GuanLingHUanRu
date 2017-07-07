@@ -1,6 +1,5 @@
 package com.example.asus.onlyu.module.merchant;
 
-import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -13,6 +12,7 @@ import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.adapter.Marter_Adapter;
 import com.example.asus.onlyu.base.BasePresenterImpl;
 import com.example.asus.onlyu.base.MVPBaseFragment;
+import com.example.asus.onlyu.module.home.utils.FontHelper;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -25,29 +25,31 @@ import butterknife.Unbinder;
  * 邮箱：17600157003@163.com
  */
 
-public class MerChant<T> extends MVPBaseFragment<T> implements View.OnClickListener {
+public class MerChant<T> extends MVPBaseFragment<T> {
+
 
     @BindView(R.id.marter_edit)
-    EditText     mMarterEdit;
-    @BindView(R.id.marter_ssoke)
-    RadioButton  mMarterSsoke;
-    @BindView(R.id.marter_tea)
-    RadioButton  mMarterTea;
-    @BindView(R.id.marter_tea1)
-    RadioButton  mMarterTea1;
-    @BindView(R.id.marter_tea2)
-    RadioButton  mMarterTea2;
-    @BindView(R.id.marter_tea3)
-    RadioButton  mMarterTea3;
-    @BindView(R.id.marter_tea4)
-    RadioButton  mMarterTea4;
-    @BindView(R.id.marter_radio)
-    RadioGroup   mMarterRadio;
-    @BindView(R.id.marter_recycler)
-    RecyclerView mMarterRecycler;
+    EditText marterEdit;
     @BindView(R.id.marter_bnt)
-    Button       mMarterBnt;
+    Button marterBnt;
+    @BindView(R.id.marter_ssoke)
+    RadioButton marterSsoke;
+    @BindView(R.id.marter_tea)
+    RadioButton marterTea;
+    @BindView(R.id.marter_tea1)
+    RadioButton marterTea1;
+    @BindView(R.id.marter_tea2)
+    RadioButton marterTea2;
+    @BindView(R.id.marter_tea3)
+    RadioButton marterTea3;
+    @BindView(R.id.marter_tea4)
+    RadioButton marterTea4;
+    @BindView(R.id.marter_radio)
+    RadioGroup marterRadio;
+    @BindView(R.id.marter_recycler)
+    RecyclerView marterRecycler;
     Unbinder unbinder;
+    Unbinder unbinder1;
     private BasePresenterImpl mBasePresenter;
 
     @Override
@@ -58,9 +60,10 @@ public class MerChant<T> extends MVPBaseFragment<T> implements View.OnClickListe
 
     @Override
     protected void initView() {
-        mMarterRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
+        FontHelper.applyFont(getActivity(), marterEdit, "fonts/msyh.ttc");
+        marterRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         Marter_Adapter adapter = new Marter_Adapter(getActivity());
-        mMarterRecycler.setAdapter(adapter);
+        marterRecycler.setAdapter(adapter);
     }
 
     @Override
@@ -74,14 +77,12 @@ public class MerChant<T> extends MVPBaseFragment<T> implements View.OnClickListe
 
     }
 
-    @Override
-    public void onClick(View v) {
 
-    }
-
-    @OnClick({R.id.marter_ssoke, R.id.marter_tea, R.id.marter_tea1, R.id.marter_tea2, R.id.marter_tea3, R.id.marter_tea4, R.id.marter_bnt})
+    @OnClick({R.id.marter_bnt, R.id.marter_ssoke, R.id.marter_tea, R.id.marter_tea1, R.id.marter_tea2, R.id.marter_tea3, R.id.marter_tea4})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.marter_bnt:
+                break;
             case R.id.marter_ssoke:
                 break;
             case R.id.marter_tea:
@@ -93,9 +94,6 @@ public class MerChant<T> extends MVPBaseFragment<T> implements View.OnClickListe
             case R.id.marter_tea3:
                 break;
             case R.id.marter_tea4:
-                break;
-            case R.id.marter_bnt:
-                startActivity(new Intent(getActivity(),Shopping_Activity.class));
                 break;
         }
     }

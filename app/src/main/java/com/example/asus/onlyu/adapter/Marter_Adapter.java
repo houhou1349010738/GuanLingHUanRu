@@ -46,16 +46,19 @@ public class Marter_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             View view = LayoutInflater.from(mContext).inflate(R.layout.marter_adapter_item1, parent, false);
             ViewHolderOne holderOne = new ViewHolderOne(view);
             return holderOne;
-        } else {
+        } if (viewType == ITEMTWO){
             View view = LayoutInflater.from(mContext).inflate(R.layout.marter_adapter_item2, parent, false);
             ViewHolderOne2 holderOne2 = new ViewHolderOne2(view);
 
             return holderOne2;
         }
+        return null;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        int itemViewType = getItemViewType(position);
+
 
     }
 

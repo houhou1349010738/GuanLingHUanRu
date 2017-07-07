@@ -4,10 +4,28 @@
               android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/marter_item_iv"
-                    android:layout_width="224px"
-                    android:layout_height="210px"
+                    android:layout_width="220px"
+                    android:layout_height="220px"
                     android:layout_marginLeft="6px"
                     android:layout_marginTop="16px"
-                    android:background="@drawable/qq_qq"
+                    android:background="@drawable/background"
                     />
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="63px"
+                    android:layout_marginTop="42px"
+                    android:background="@drawable/baicaowei"
+                    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26px"
+        android:textColor="#fff"
+        android:text="百草味"
+        android:layout_marginLeft="67px"
+        android:layout_below="@id/iv"
+        android:layout_marginTop="12px"
+        />
 </RelativeLayout>

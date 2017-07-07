@@ -1,102 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+
                 android:background="#fff"
     >
-            <ImageView
-                android:id="@+id/shopping_finsh"
-                android:layout_width="44px"
-                android:layout_height="44px"
-                android:background="@drawable/finsh"
-                android:layout_marginTop="35px"
-                android:layout_marginLeft="20px"
-                />
-                <EditText
-                    android:id="@+id/shopping_edit"
-                    android:layout_width="558px"
-                    android:layout_height="58px"
-                    android:layout_marginTop="30px"
-                    android:hint="请输入商品名称"
-                    android:textSize="22px"
-                    android:layout_toRightOf="@id/shopping_finsh"
-                    android:layout_marginLeft="20px"
-                    android:background="@drawable/search_marter"
-                    />
-            <ImageView
-                android:id="@+id/shopping_menu"
-                android:layout_width="44px"
-                android:layout_height="44px"
-                android:layout_marginTop="30px"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20px"
-                android:background="@drawable/menu"
-                />
+
+    <ImageView
+        android:id="@+id/shopping_finsh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88px"
+        android:background="@drawable/finsh"
+        android:layout_marginLeft="20px"
+        />
+
+    <EditText
+        android:id="@+id/shopping_edit"
+        android:layout_width="540px"
+        android:layout_height="52px"
+        android:layout_marginTop="80px"
+        android:background="@drawable/shopping_bnt"
+        android:hint="请输入商家/商品名称"
+        android:textColor="#666666"
+        android:layout_marginLeft="42px"
+        android:textSize="22px"
+       android:layout_toRightOf="@id/shopping_finsh"
+        />
+
+    <ImageView
+        android:id="@+id/shopping_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="92px"
+        android:background="@drawable/menu"
+        android:layout_marginRight="20px"
+        />
     <android.support.v7.widget.CardView
         android:id="@+id/shipping_card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116px"
+        android:layout_height="52px"
+        android:layout_below="@id/shopping_finsh"
+        android:layout_marginTop="24px"
+        app:cardBackgroundColor="#fff"
         app:cardElevation="10px"
-        android:background="#000"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50px"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             >
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50px"
                 android:layout_weight="1"
+                android:background="#fff"
                 android:text="综合"
                 android:textSize="20px"
-                android:background="#fff"
+                android:gravity="center"
+
                 />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50px"
                 android:layout_weight="1"
+                android:background="#fff"
                 android:text="价格"
                 android:textSize="20px"
-                android:background="#fff"
+                android:gravity="center"
+
                 />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50px"
                 android:layout_weight="1"
+                android:background="#fff"
                 android:text="销量"
                 android:textSize="20px"
-                android:background="#fff"
+
+                android:gravity="center"
                 />
         </LinearLayout>
+
     </android.support.v7.widget.CardView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_alignTop="@id/shipping_card"
-        android:layout_marginLeft="260px"
-        android:layout_marginTop="25px"
+        android:layout_marginLeft="250px"
         android:text="|"
+        android:layout_marginTop="145px"
+        android:gravity="center"
+        android:layout_marginBottom="5px"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/shipping_card"
         android:layout_marginLeft="500px"
+        android:gravity="center"
         android:text="|"
-        android:layout_marginTop="25px"
+        android:layout_marginTop="145px"
+        android:layout_marginBottom="5px"
         />
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/shopping_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/shipping_card"
-            android:layout_marginTop="25px"
-            android:layout_marginLeft="20px"
-            android:layout_marginRight="20px"
-            android:background="#f7f7f7"
-            android:layout_centerHorizontal="true"
-            ></android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/textinput"
+        android:layout_width="match_parent"
+        android:layout_height="22px"
+        android:background="#f4f7f8"
+        android:layout_below="@id/shipping_card"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shopping_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textinput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="#f7f7f7"
+        ></android.support.v7.widget.RecyclerView>
 </RelativeLayout>

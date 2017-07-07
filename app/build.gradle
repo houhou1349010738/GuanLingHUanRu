@@ -53,4 +53,6 @@ dependencies {
     compile 'com.jcodecraeer:xrecyclerview:1.2.6'
     //banner
     compile 'com.youth.banner:banner:1.4.2'
+    //BaseRecyclerAdapter
+    compile'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
 }
