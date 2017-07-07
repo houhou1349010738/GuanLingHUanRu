@@ -43,6 +43,7 @@
                     android:text="NFC防伪查询"
                     android:textColor="#2a2a2a"
                     android:textSize="32px"
+                    android:id="@+id/nfc_title"
                     />
             </RelativeLayout>
 
@@ -100,7 +101,7 @@
             android:textColor="#ed9c1e"
             android:layout_toEndOf="@+id/nfc_tv_l3_1"
             android:layout_below="@+id/nfc_tv_l2"
-            android:text="【滴】"
+            android:text="[滴]"
             android:id="@+id/nfc_tv_l3_2"
             android:layout_marginTop="10px"/>
         <TextView

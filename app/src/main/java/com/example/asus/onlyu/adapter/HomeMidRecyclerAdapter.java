@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.asus.onlyu.R;
+import com.example.asus.onlyu.module.home.utils.FontHelper;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import butterknife.BindView;
@@ -57,9 +58,9 @@ public class HomeMidRecyclerAdapter extends RecyclerView.Adapter<HomeMidRecycler
             AutoUtils.autoSize(itemView);
             ButterKnife.bind(this, itemView);
             mHomeMidItemTvoldmoney.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
-//            FontHelper.applyFont(mContext,mHomeMidItemTvname,"fonts/msyh.ttc");
-//            FontHelper.applyFont(mContext,mHomeMidItemTvmoney,"fonts/msyh.ttc");
-//            FontHelper.applyFont(mContext,mHomeMidItemTvoldmoney,"fonts/msyh.ttc");
+            FontHelper.applyFont(mContext,mHomeMidItemTvname, FontHelper.WRYH);
+            FontHelper.applyFont(mContext,mHomeMidItemTvmoney,FontHelper.WRYH);
+            FontHelper.applyFont(mContext,mHomeMidItemTvoldmoney,FontHelper.WRYH);
         }
     }
 

@@ -57,8 +57,11 @@ public class ShowDialog {
         View viewDialog = inflater.inflate(R.layout.view_alertdialog, null);
         // 根据view找控件
         Button but_neg = (Button) viewDialog.findViewById(R.id.btn_neg);
+        FontHelper.applyFont(context,but_neg,FontHelper.WRYHL);
         Button but_pos = (Button) viewDialog.findViewById(R.id.btn_pos);
+        FontHelper.applyFont(context,but_pos,FontHelper.WRYHL);
         TextView tv_msg = (TextView) viewDialog.findViewById(R.id.txt_msg);
+        FontHelper.applyFont(context,tv_msg,FontHelper.WRYHL);
         tv_msg.setText(msg);
         but_neg.setOnClickListener(new View.OnClickListener() {
             @Override

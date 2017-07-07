@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.asus.onlyu.R;
+import com.example.asus.onlyu.module.home.utils.FontHelper;
 import com.example.asus.onlyu.module.home.utils.GildeImage;
 import com.example.asus.onlyu.module.home.view.Home_NFC_activity;
 import com.youth.banner.Banner;
@@ -121,10 +122,10 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             super(view);
             AutoUtils.autoSize(view);
             ButterKnife.bind(this, view);
-//            FontHelper.applyFont(mContext, mThreebutTvShopping, "fonts/PingFang Light.ttf");
-//            FontHelper.applyFont(mContext, mThreebutTvNfc, "fonts/PingFang Light.ttf");
-//            FontHelper.applyFont(mContext, mThreebutTvTwocode, "fonts/PingFang Light.ttf");
-//            FontHelper.applyFont(mContext, mThreebutTvHistory, "fonts/PingFang Light.ttf");
+            FontHelper.applyFont(mContext, mThreebutTvShopping, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvNfc, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvTwocode, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvHistory, FontHelper.PFL);
             mThreebutIvNfc.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -156,8 +157,8 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
             linearLayoutManager.setOrientation(GridLayoutManager.HORIZONTAL);
             mMidRecycle.setLayoutManager(linearLayoutManager);
-//            FontHelper.applyFont(mContext,mMidTvJxhh,"fonts/msyhbd.ttc");
-//            FontHelper.applyFont(mContext,mMidTvTtzx,"fonts/msyhbd.ttc");
+            FontHelper.applyFont(mContext,mMidTvJxhh,FontHelper.WRYHBD);
+            FontHelper.applyFont(mContext,mMidTvTtzx,FontHelper.WRYHBD);
         }
     }
 
@@ -173,8 +174,8 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             super(view);
             AutoUtils.autoSize(view);
             ButterKnife.bind(this, view);
-//            FontHelper.applyFont(mContext, mHomeItemTvname, "fonts/PingFang Medium.ttf");
-//            FontHelper.applyFont(mContext, mHomeItemTvtime, "fonts/PingFang Medium.ttf");
+            FontHelper.applyFont(mContext, mHomeItemTvname, FontHelper.PFM);
+            FontHelper.applyFont(mContext, mHomeItemTvtime, FontHelper.PFM);
         }
     }
 }
