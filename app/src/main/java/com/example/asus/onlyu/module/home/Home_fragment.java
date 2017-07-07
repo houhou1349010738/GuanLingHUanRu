@@ -28,7 +28,7 @@ public class Home_fragment extends MVPBaseFragment {
     protected void initdata() {
 
     }
-//aaa
+
     @Override
     protected void initView() {
         //加载recyclerview

@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/lLayout_bg"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/alert_bg"
     >
-
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center_horizontal"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="402px"
+        android:layout_height="210px">
+<com.zhy.autolayout.AutoLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="64px">
     <TextView
         android:id="@+id/txt_msg"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
         android:textColor="#2a2a2a"
-        android:textSize="16sp"
-        android:layout_below="@id/txt_title"/>
+        android:textSize="28px"
+        android:text="是否使用当前位置"
+        />
+</com.zhy.autolayout.AutoLinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
+        android:layout_height="1px"
         android:background="@color/alertdialog_line"
         android:layout_above="@+id/ll_dialog"
         android:id="@+id/iv_dialog"
         />
-
-    <LinearLayout
+    <com.zhy.autolayout.AutoLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -49,29 +44,33 @@
         <Button
             android:id="@+id/btn_neg"
             android:layout_width="wrap_content"
-            android:layout_height="43dp"
+            android:layout_height="60px"
             android:layout_weight="1"
             android:background="@drawable/alertdialog_left_selector"
             android:gravity="center"
             android:textColor="#2a2a2a"
-            android:textSize="16sp" />
+            android:textSize="20px"
+            android:text="取消"/>
 
         <ImageView
             android:id="@+id/img_line"
-            android:layout_width="0.5dp"
-            android:layout_height="43dp"
+            android:layout_width="1px"
+            android:layout_height="60px"
             android:background="@color/alertdialog_line" />
 
         <Button
             android:id="@+id/btn_pos"
             android:layout_width="wrap_content"
-            android:layout_height="43dp"
+            android:layout_height="60px"
             android:layout_weight="1"
             android:background="@drawable/alertdialog_right_selector"
             android:gravity="center"
             android:textColor="#2a2a2a"
-            android:textSize="16sp"
+            android:textSize="20px"
+            android:text="确定"
              />
-    </LinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
 
-</RelativeLayout>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>
