@@ -3,6 +3,7 @@ package com.example.asus.onlyu.adapter;
 import android.content.Context;
 import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.module.home.utils.FontHelper;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +29,7 @@ public class HomeMidRecyclerAdapter extends RecyclerView.Adapter<HomeMidRecycler
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = View.inflate(mContext, R.layout.home_mid_item, null);
+        View view =LayoutInflater.from(mContext).inflate(R.layout.home_mid_item, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -53,6 +55,7 @@ public class HomeMidRecyclerAdapter extends RecyclerView.Adapter<HomeMidRecycler
         TextView mHomeMidItemTvoldmoney;
         public ViewHolder(View itemView) {
             super(itemView);
+            AutoUtils.autoSize(itemView);
             ButterKnife.bind(this, itemView);
             mHomeMidItemTvoldmoney.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
             FontHelper.applyFont(mContext,mHomeMidItemTvname,"fonts/msyh.ttc");
