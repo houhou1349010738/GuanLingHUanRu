@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="680px"
+        android:layout_height="304px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px"
+        android:background="@drawable/dibu">
+
+        <ImageView
+            android:id="@+id/allorder_shop_iv"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_below="@+id/order_tvcount"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:src="@drawable/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/allorder_shop_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="20px"
+            android:text="待支付"
+            android:textColor="#bb0c0c"
+            android:textSize="20px"
+            />
+
+        <TextView
+            android:id="@+id/allorder_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="34px"
+            android:layout_toRightOf="@+id/allorder_shop_iv"
+            android:text="阿迪达斯裤子"
+            android:textColor="#2a2a2a"
+            android:textSize="22px"
+            />
+
+        <LinearLayout
+            android:id="@+id/allorder_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/allorder_shop_name"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="10px"
+            android:layout_toRightOf="@+id/allorder_shop_iv">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+
+            <TextView
+                android:id="@+id/allorder_shop_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="X1"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="尺码"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+
+            <TextView
+                android:id="@+id/allorder_shop_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="：28"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="颜色"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+
+            <TextView
+                android:id="@+id/allorder_shop_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text=":深蓝色"
+                android:textColor="#999999"
+                android:textSize="20px"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/allorder_ll"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="84px"
+            android:layout_toLeftOf="@+id/allorder_shop_price"
+            android:text="共一件商品 需付款："
+            android:textColor="#2a2a2a"
+            android:textSize="24px"
+            />
+
+        <TextView
+            android:id="@+id/allorder_shop_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/allorder_ll"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="84px"
+            android:text="￥16,36.00"
+            android:textColor="#2a2a2a"
+            android:textSize="30px"
+            />
+
+        <Button
+            android:id="@+id/allorder_btn1"
+            android:layout_width="128px"
+            android:layout_height="40px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="156px"
+            android:background="@drawable/allorder_button"
+            android:text="取消"
+            android:textColor="#2a2a2a"
+            android:textSize="28px"
+            />
+
+        <Button
+            android:id="@+id/allorder_btn2"
+            android:layout_width="128px"
+            android:layout_height="40px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="20px"
+            android:background="@drawable/allorder_button"
+            android:text="去支付"
+            android:textColor="#2a2a2a"
+            android:textSize="28px"
+            />
+    </RelativeLayout>
+</LinearLayout>

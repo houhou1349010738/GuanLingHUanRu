@@ -40,6 +40,8 @@
         </activity>
         <activity android:name=".module.shoppingcar.AddressActivity">
         </activity>
+        <activity android:name=".module.shoppingcar.order.AllOrderActivity">
+        </activity>
     </application>
 
 </manifest>
