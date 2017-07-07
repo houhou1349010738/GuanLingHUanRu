@@ -7,36 +7,33 @@
     android:layout_height="match_parent"
     tools:context="com.example.asus.onlyu.module.shoppingcar.OrderActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
+        android:id="@+id/relayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:layout_height="146px">
 
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/back"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/back"/>
-
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="@string/affirm_order"
-                android:textColor="#2a2a2a"
-                android:textSize="32px"/>
-        </com.zhy.autolayout.AutoRelativeLayout>
-    </android.support.v7.widget.Toolbar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32px"
+            android:text="@string/affirm_order"
+            android:textColor="#2a2a2a"
+            android:textSize="32px"
+            />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/relayout"
         android:background="#f7f7f7"
         android:gravity="right"
         android:orientation="vertical"

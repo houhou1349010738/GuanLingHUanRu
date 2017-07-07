@@ -2,7 +2,6 @@ package com.example.asus.onlyu.module.shoppingcar;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,10 +25,6 @@ import butterknife.Unbinder;
  */
 
 public class ShoppingCar_Fragment extends MVPBaseFragment {
-    @BindView(R.id.tvTitle)
-    TextView mTvTitle;
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
     Unbinder unbinder;
     @BindView(R.id.ivSelectAll)
     ImageView mIvSelectAll;
