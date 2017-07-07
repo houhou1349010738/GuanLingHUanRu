@@ -60,7 +60,7 @@ public class MerChant<T> extends MVPBaseFragment<T> {
 
     @Override
     protected void initView() {
-        FontHelper.applyFont(getActivity(), marterEdit, "fonts/msyh.ttc");
+        FontHelper.applyFont(getActivity(), marterEdit,FontHelper.WRYH);
         marterRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         Marter_Adapter adapter = new Marter_Adapter(getActivity());
         marterRecycler.setAdapter(adapter);
