@@ -64,7 +64,6 @@ public class ShoppingCar_Fragment extends MVPBaseFragment {
 
     @Override
     public void UpData(Object o) {
-
     }
 
     @Override

@@ -16,6 +16,7 @@ import com.example.asus.onlyu.R;
 
 public class AllOrderAdapter extends RecyclerView.Adapter<AllOrderAdapter.MyViewHolder>{
     private Context mContext;
+
     public AllOrderAdapter(Context context) {
         mContext = context;
     }

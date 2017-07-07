@@ -36,8 +36,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f7f7f7"
         android:layout_below="@+id/toolbar"
+        android:background="#f7f7f7"
         android:gravity="right"
         android:orientation="vertical"
         >
@@ -157,9 +157,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/order_tvcount"
-                android:layout_toRightOf="@+id/order_shop_iv"
-                android:layout_marginTop="16px"
                 android:layout_marginLeft="14px"
+                android:layout_marginTop="16px"
+                android:layout_toRightOf="@+id/order_shop_iv"
                 android:text="阿迪达斯裤子"
                 />
 
@@ -168,26 +168,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/order_shop_name"
-                android:layout_toRightOf="@+id/order_shop_iv"
+                android:layout_marginLeft="14px"
                 android:layout_marginTop="16px"
-                android:layout_marginLeft="14px">
+                android:layout_toRightOf="@+id/order_shop_iv">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="数量"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
 
                 <TextView
+                    android:id="@+id/order_shop_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10px"
-                    android:id="@+id/order_shop_count"
                     android:text="X1"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
 
                 <TextView
@@ -195,124 +195,126 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20px"
                     android:text="尺码"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
 
                 <TextView
+                    android:id="@+id/order_shop_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10px"
-                    android:id="@+id/order_shop_size"
                     android:text="：28"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20px"
                     android:text="颜色"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
 
                 <TextView
+                    android:id="@+id/order_shop_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10px"
-                    android:id="@+id/order_shop_color"
                     android:text=":深蓝色"
-                    android:textSize="22px"
                     android:textColor="#999999"
+                    android:textSize="22px"
                     />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/order_ll"
                 android:layout_alignParentRight="true"
+                android:layout_below="@+id/order_ll"
                 android:layout_marginRight="20px"
                 android:layout_marginTop="22px"
                 android:text="1,636"
                 android:textSize="22px"
                 />
+
             <TextView
                 android:id="@+id/tv_line"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/order_ll"
-                android:background="#eeeeee"
                 android:layout_marginTop="70px"
+                android:background="#eeeeee"
                 />
-            
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="114px"
                 android:layout_below="@+id/tv_line"
                 >
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#2a2a2a"
-                    android:layout_marginLeft="20px"
                     android:layout_centerVertical="true"
-                    android:textSize="24px"
+                    android:layout_marginLeft="20px"
                     android:text="商品金额："
+                    android:textColor="#2a2a2a"
+                    android:textSize="24px"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="20px"
-                    android:textSize="22px"
                     android:layout_centerVertical="true"
-                    android:textColor="#2a2a2a"
+                    android:layout_marginRight="20px"
                     android:text="16,36.00"
+                    android:textColor="#2a2a2a"
+                    android:textSize="22px"
                     />
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>
 
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="100px"
-       android:layout_alignParentBottom="true"
-       >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        >
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_centerVertical="true"
-           android:text="应付金额：￥"
-           android:layout_marginLeft="40px"
-           android:textSize="28px"
-           android:textColor="#2a2a2a"
-           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="应付金额：￥"
+            android:textColor="#2a2a2a"
+            android:textSize="28px"
+            />
 
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginLeft="210px"
-           android:layout_centerVertical="true"
-           android:text="16,36.00"
-           android:textSize="28px"
-           android:textColor="#2a2a2a"
-           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="210px"
+            android:text="16,36.00"
+            android:textColor="#2a2a2a"
+            android:textSize="28px"
+            />
 
-       <Button
-           android:layout_width="244px"
-           android:layout_height="70px"
-           android:layout_centerVertical="true"
-           android:layout_alignParentRight="true"
-           android:layout_marginRight="20px"
-           android:text="提交订单"
-           android:textSize="28px"
-           android:textColor="#ffffff"
-           android:background="#ff0000"
-           />
-   </RelativeLayout>
-
+        <Button
+            android:layout_width="244px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:background="#ff0000"
+            android:text="提交订单"
+            android:textColor="#ffffff"
+            android:textSize="28px"
+            />
+    </RelativeLayout>
 </RelativeLayout>

@@ -6,7 +6,6 @@ import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
 
 public class AddressActivity extends MVPBaseActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

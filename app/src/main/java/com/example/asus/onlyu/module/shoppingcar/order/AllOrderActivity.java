@@ -2,8 +2,6 @@ package com.example.asus.onlyu.module.shoppingcar.order;
 
 import android.support.design.widget.TabLayout;
 import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
@@ -16,10 +14,6 @@ public class AllOrderActivity extends MVPBaseActivity {
     TabLayout mAllorderTab;
     @BindView(R.id.allorder_container)
     FrameLayout mAllorderContainer;
-    @BindView(R.id.allorder_relayout)
-    RelativeLayout mAllorderRelayout;
-    @BindView(R.id.allorder_scrollview)
-    ScrollView mAllorderScrollview;
 
     private String[] mStrings=new String[]{"全部","待付款","待发货","待收货","售后"};
     @Override
