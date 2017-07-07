@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
 import com.example.asus.onlyu.module.home.Home_fragment;
+import com.example.asus.onlyu.module.home.utils.AlertDialog;
 import com.example.asus.onlyu.module.merchant.MerChant;
 import com.example.asus.onlyu.module.shoppingcar.ShoppingCar_Fragment;
 
@@ -37,8 +38,9 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
 
     @Override
     protected void initview() {
-        //初始化视图
+        //初始化视图，加载首页fragment
         replaceFra(R.id.intofra_fral,new Home_fragment());
+        dialog();
 
     }
 
@@ -69,6 +71,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     @OnClick({R.id.iv_home, R.id.iv_pinpai, R.id.iv_shop, R.id.iv_my})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            //加载首页
             case R.id.iv_home:
                 replaceFra(R.id.intofra_fral,new Home_fragment());
                 mIvHome.setImageResource(R.drawable.home_dj);
@@ -76,6 +79,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
                 mIvShop.setImageResource(R.drawable.shop_mr);
                 mIvMy.setImageResource(R.drawable.my_mr);
                 break;
+            //加载品牌
             case R.id.iv_pinpai:
                 replaceFra(R.id.intofra_fral,new MerChant());
                 mIvPinpai.setImageResource(R.drawable.pinpai_dj);
@@ -83,6 +87,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
                 mIvMy.setImageResource(R.drawable.my_mr);
                 mIvHome.setImageResource(R.drawable.home_mr);
                 break;
+            //加载购物车
             case R.id.iv_shop:
                 replaceFra(R.id.intofra_fral,new ShoppingCar_Fragment());
                 mIvShop.setImageResource(R.drawable.shop_dj);
@@ -90,6 +95,7 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
                 mIvHome.setImageResource(R.drawable.home_mr);
                 mIvPinpai.setImageResource(R.drawable.pinpai_mr);
                 break;
+            //加载我的
             case R.id.iv_my:
                 mIvMy.setImageResource(R.drawable.my_dj);
                 mIvHome.setImageResource(R.drawable.home_mr);
@@ -98,4 +104,20 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
                 break;
         }
     }
+
+    private void dialog() {
+      new AlertDialog(HomeActivity.this).builder().setMsg("是否使用当前位置")
+              .setPositiveButton("确定", new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+
+                  }
+              })
+              .setNegativeButton("取消", new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+
+                  }
+              }).show();
+}
 }

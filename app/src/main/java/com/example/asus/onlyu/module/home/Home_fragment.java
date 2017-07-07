@@ -31,6 +31,7 @@ public class Home_fragment extends MVPBaseFragment {
 
     @Override
     protected void initView() {
+        //加载recyclerview
         HomeRecyclerAdapter adapter = new HomeRecyclerAdapter(getActivity());
         mXrecycleHomef.setAdapter(adapter);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
