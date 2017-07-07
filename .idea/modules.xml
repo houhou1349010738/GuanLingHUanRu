@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GuanLingHUanRu.iml" filepath="$PROJECT_DIR$/GuanLingHUanRu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SendXiangMu.iml" filepath="$PROJECT_DIR$/SendXiangMu.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofitlibrary/retrofitlibrary.iml" filepath="$PROJECT_DIR$/retrofitlibrary/retrofitlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/utilcode2/utilcode2.iml" filepath="$PROJECT_DIR$/utilcode2/utilcode2.iml" />
