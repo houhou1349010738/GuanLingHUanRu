@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".module.shoppingcar.order.AllOrderActivity">
         </activity>
+        <activity android:name=".module.home.view.Home_NFC_activity">
+        </activity>
     </application>
 
 </manifest>

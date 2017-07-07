@@ -55,4 +55,7 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.2'
     //BaseRecyclerAdapter
     compile'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
 }

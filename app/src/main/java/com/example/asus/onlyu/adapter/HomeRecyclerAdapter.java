@@ -1,9 +1,11 @@
 package com.example.asus.onlyu.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -13,8 +15,10 @@ import android.widget.TextView;
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.module.home.utils.FontHelper;
 import com.example.asus.onlyu.module.home.utils.GildeImage;
+import com.example.asus.onlyu.module.home.view.Home_NFC_activity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
 
@@ -37,19 +41,19 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case 1:
-                View home_vp = View.inflate(mContext, R.layout.home_item_vp, null);
+                View home_vp = LayoutInflater.from(mContext).inflate(R.layout.home_item_vp, parent, false);
                 VpPart vpPart = new VpPart(home_vp);
                 return vpPart;
             case 2:
-                View threebutpart = View.inflate(mContext, R.layout.home_item_threebut, null);
+                View threebutpart = LayoutInflater.from(mContext).inflate(R.layout.home_item_threebut, parent, false);
                 Threebutpart tbp = new Threebutpart(threebutpart);
                 return tbp;
             case 3:
-                View midpart = View.inflate(mContext, R.layout.home_item_mid, null);
+                View midpart = LayoutInflater.from(mContext).inflate(R.layout.home_item_mid, parent, false);
                 Mid mid = new Mid(midpart);
                 return mid;
         }
-        View home_item = View.inflate(mContext, R.layout.home_item, null);
+        View home_item = LayoutInflater.from(mContext).inflate(R.layout.home_item, parent, false);
         Item item = new Item(home_item);
         return item;
     }
@@ -82,6 +86,7 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         public VpPart(View itemView) {
             super(itemView);
+            AutoUtils.autoSize(itemView);
             mBanner = (Banner) itemView.findViewById(R.id.item_vp_banner);
             mBanner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR);
             mBanner.setIndicatorGravity(BannerConfig.RIGHT);
@@ -115,11 +120,19 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         Threebutpart(View view) {
             super(view);
+            AutoUtils.autoSize(view);
             ButterKnife.bind(this, view);
-            FontHelper.applyFont(mContext, mThreebutTvShopping, "fonts/PingFang Light.ttf");
-            FontHelper.applyFont(mContext, mThreebutTvNfc, "fonts/PingFang Light.ttf");
-            FontHelper.applyFont(mContext, mThreebutTvTwocode, "fonts/PingFang Light.ttf");
-            FontHelper.applyFont(mContext, mThreebutTvHistory, "fonts/PingFang Light.ttf");
+            FontHelper.applyFont(mContext, mThreebutTvShopping, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvNfc, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvTwocode, FontHelper.PFL);
+            FontHelper.applyFont(mContext, mThreebutTvHistory, FontHelper.PFL);
+            mThreebutIvNfc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, Home_NFC_activity.class);
+                    mContext.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -137,14 +150,15 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         Mid(View view) {
             super(view);
+            AutoUtils.autoSize(view);
             ButterKnife.bind(this, view);
             HomeMidRecyclerAdapter midadapter = new HomeMidRecyclerAdapter(mContext);
             mMidRecycle.setAdapter(midadapter);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
             linearLayoutManager.setOrientation(GridLayoutManager.HORIZONTAL);
             mMidRecycle.setLayoutManager(linearLayoutManager);
-            FontHelper.applyFont(mContext,mMidTvJxhh,"fonts/msyhbd.ttc");
-            FontHelper.applyFont(mContext,mMidTvTtzx,"fonts/msyhbd.ttc");
+            FontHelper.applyFont(mContext,mMidTvJxhh,FontHelper.WRYHBD);
+            FontHelper.applyFont(mContext,mMidTvTtzx,FontHelper.WRYHBD);
         }
     }
 
@@ -158,9 +172,10 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         Item(View view) {
             super(view);
+            AutoUtils.autoSize(view);
             ButterKnife.bind(this, view);
-            FontHelper.applyFont(mContext, mHomeItemTvname, "fonts/PingFang Medium.ttf");
-            FontHelper.applyFont(mContext, mHomeItemTvtime, "fonts/PingFang Medium.ttf");
+            FontHelper.applyFont(mContext, mHomeItemTvname, FontHelper.PFM);
+            FontHelper.applyFont(mContext, mHomeItemTvtime, FontHelper.PFM);
         }
     }
 }

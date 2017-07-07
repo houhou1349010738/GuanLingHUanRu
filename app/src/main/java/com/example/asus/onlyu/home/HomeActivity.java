@@ -8,8 +8,8 @@ import android.widget.ImageView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
-import com.example.asus.onlyu.module.home.Home_fragment;
-import com.example.asus.onlyu.module.home.utils.AlertDialog;
+import com.example.asus.onlyu.module.home.view.Home_fragment;
+import com.example.asus.onlyu.module.home.utils.ShowDialog;
 import com.example.asus.onlyu.module.merchant.MerChant;
 import com.example.asus.onlyu.module.shoppingcar.ShoppingCar_Fragment;
 
@@ -40,7 +40,8 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
     protected void initview() {
         //初始化视图，加载首页fragment
         replaceFra(R.id.intofra_fral,new Home_fragment());
-        dialog();
+        ShowDialog.showLocdialog(this,"是否使用当前位置");
+        ShowDialog.showLocdialog(this,"是否打开NFC");
 
     }
 
@@ -105,19 +106,5 @@ public class HomeActivity<T> extends MVPBaseActivity<T> {
         }
     }
 
-    private void dialog() {
-      new AlertDialog(HomeActivity.this).builder().setMsg("是否使用当前位置")
-              .setPositiveButton("确定", new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
 
-                  }
-              })
-              .setNegativeButton("取消", new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-
-                  }
-              }).show();
-}
 }
