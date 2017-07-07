@@ -1,6 +1,7 @@
 package com.example.asus.onlyu.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.module.home.utils.GildeImage;
+import com.example.asus.onlyu.module.home.view.Home_NFC_activity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -123,6 +125,13 @@ public class HomeRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 //            FontHelper.applyFont(mContext, mThreebutTvNfc, "fonts/PingFang Light.ttf");
 //            FontHelper.applyFont(mContext, mThreebutTvTwocode, "fonts/PingFang Light.ttf");
 //            FontHelper.applyFont(mContext, mThreebutTvHistory, "fonts/PingFang Light.ttf");
+            mThreebutIvNfc.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, Home_NFC_activity.class);
+                    mContext.startActivity(intent);
+                }
+            });
         }
     }
 

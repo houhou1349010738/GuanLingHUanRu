@@ -1,4 +1,4 @@
-package com.example.asus.onlyu.module.home;
+package com.example.asus.onlyu.module.home.view;
 
 import android.support.v7.widget.LinearLayoutManager;
 

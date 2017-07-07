@@ -22,6 +22,7 @@
         <item name="android:layout_height">80px</item>
         <item name="android:layout_gravity">center</item>
     </style>
+    <!-- 沉浸式-->
     <style name="TranslucentTheme" parent="android:Theme.Holo.Light.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>  </style>
   

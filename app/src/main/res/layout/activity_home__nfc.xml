@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/TranslucentTheme"
+    tools:context="com.example.asus.onlyu.module.home.view.Home_NFC_activity"
+    android:background="@drawable/beijing"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relayout"
+        android:layout_width="match_parent"
+        android:layout_height="146px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50px"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/nfc_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:src="@drawable/nfc_back"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:layout_toEndOf="@+id/nfc_iv_back"
+                android:layout_toStartOf="@+id/nfc_iv_help"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="NFC防伪查询"
+                    android:textColor="#2a2a2a"
+                    android:textSize="32px"
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/nfc_iv_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:src="@drawable/help"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nfc_phone"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="32px">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32px"
+        android:textColor="@color/textcolor_black"
+        android:layout_marginTop="87px"
+        android:layout_marginLeft="57px"
+        android:text="将手机背面的NFC感应"
+        android:id="@+id/nfc_tv_l1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:textColor="@color/textcolor_black"
+            android:layout_below="@+id/nfc_tv_l1"
+            android:layout_marginLeft="57px"
+            android:text="区对于商品防伪标签位"
+            android:id="@+id/nfc_tv_l2"
+            android:layout_marginTop="10px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:textColor="@color/textcolor_black"
+            android:layout_below="@+id/nfc_tv_l2"
+            android:layout_marginLeft="57px"
+            android:text="置听到"
+            android:id="@+id/nfc_tv_l3_1"
+            android:layout_marginTop="10px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="34px"
+            android:textColor="#ed9c1e"
+            android:layout_toEndOf="@+id/nfc_tv_l3_1"
+            android:layout_below="@+id/nfc_tv_l2"
+            android:text="【滴】"
+            android:id="@+id/nfc_tv_l3_2"
+            android:layout_marginTop="10px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:textColor="@color/textcolor_black"
+            android:layout_toEndOf="@+id/nfc_tv_l3_2"
+            android:layout_below="@+id/nfc_tv_l2"
+            android:text="的一声后"
+            android:id="@+id/nfc_tv_l3_3"
+            android:layout_marginTop="10px"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:textColor="@color/textcolor_black"
+            android:layout_below="@+id/nfc_tv_l3_1"
+            android:layout_marginLeft="57px"
+            android:text="即显示查询结果"
+            android:id="@+id/nfc_tv_l4"
+            android:layout_marginTop="10px"/>
+    </RelativeLayout>
+</LinearLayout>

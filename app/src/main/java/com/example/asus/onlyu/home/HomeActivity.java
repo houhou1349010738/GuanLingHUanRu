@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import com.example.asus.onlyu.R;
 import com.example.asus.onlyu.base.MVPBaseActivity;
-import com.example.asus.onlyu.module.home.Home_fragment;
+import com.example.asus.onlyu.module.home.view.Home_fragment;
 import com.example.asus.onlyu.module.home.utils.ShowDialog;
 import com.example.asus.onlyu.module.merchant.MerChant;
 import com.example.asus.onlyu.module.shoppingcar.ShoppingCar_Fragment;
